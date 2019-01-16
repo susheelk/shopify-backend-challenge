@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS marketplace;
+USE marketplace;
+
+CREATE TABLE IF NOT EXISTS products (
+	id INT AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    inventory INT NOT NULL DEFAULT 0,
+    price DECIMAL NOT NULL DEFAULT 0.0,
+    PRIMARY KEY (id)
+)
+
+
