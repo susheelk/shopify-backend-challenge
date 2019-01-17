@@ -1,16 +1,16 @@
-var express = require('express');
-var mysql = require("mysql");
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-var logger = require('morgan');
+const express = require('express');
+const mysql = require("mysql");
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var productsRouter = require('./routes/products');
-var cartRouter = require('./routes/cart');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const productsRouter = require('./routes/products');
+const cartRouter = require('./routes/cart');
 
-var app = express();
+const app = express();
 
 global.db = mysql.createConnection({
     host: "localhost",
@@ -25,7 +25,7 @@ app.use(session({ resave: true ,secret: '123456' , saveUninitialized: true}));
 
 app.use(function(req, res, next) {
     if (!req.session.cart_items){
-        req.session.cart_items = [1];
+        req.session.cart_items = [];
     }
     next();
 });
