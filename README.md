@@ -1,9 +1,10 @@
 # Shopify Backend Challenge Question
+This is my submission to the Shopify Backend Challenge question. 
 
 __NOTE__: REST controllers are contained withing the `routes` folder, main application logic is located in `app.js`
 
 ## Setup and Start
-Clone this repository, install MySQL and run `build.sql` This should initialize the database.
+Clone this repository, install MySQL and run `init.sql` This should initialize the database.
 Enter the database credentials into the `app.js` file
 
 Run `npm start` on the root directory and the server should start listening on port `3000` by default
@@ -54,3 +55,4 @@ where items with ids 1, 2, 3, 4 are being added to the cart
 
 * To view items in your shopping cart, send a `GET` request to `localhost:3000/cart/`
 * To checkout your cart, send a `POST` request to `localhost:3000/cart/checkout/`. Your items will then be checked out if inventory is available, and your cart will be cleared
+
