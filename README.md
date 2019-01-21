@@ -1,5 +1,7 @@
 # Shopify Backend Challenge Question
 
+__NOTE__: REST controllers are contained withing the `routes` folder, main application logic is located in `app.js`
+
 ## Setup and Start
 Clone this repository, install MySQL and run `build.sql` This should initialize the database.
 Enter the database credentials into the `app.js` file
